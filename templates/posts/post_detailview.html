@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="jumbotron jumbotron-fluid" style="height: 50vh; background-color:black;">
+    <div class="container" style="display: flex; justify-content:center;align-items:center; flex-direction:column">
+      <h1 class="display-4 text-center" style="color: white;">{{object.name}}</h1>
+      <p class="lead text-center" style="color: white;">{{object.body}}</p>
+      <a href="{% url 'post_listview'%}" class="btn btn-outline-light">Go back</a>
+    </div>
+  </div>
+  
+{% endblock content %}

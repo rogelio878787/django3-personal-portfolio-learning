@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+
+{% for object in object_list  %}
+
+        <div class="col-md-12">
+            <div class="card border-dark mb-3">
+                <div class="card-header" style="color: black; font-weight:'bolder'">{{object.name.upper}}</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title" style="color: black;">{{object.name}}</h5>
+                    <p class="card-text" style="color: black;">{{object.body}}</p>
+                    <a href="{%url 'post_detailview' object.id %}" class="btn btn-outline-primary">Conoce mas</a>
+                </div>
+
+        </div>
+    </div>
+
+
+
+    
+  
+{% endfor %}
+
+</div>
+
+</div>
+  
+{% endblock content %}
+
+
